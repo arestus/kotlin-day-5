@@ -42,11 +42,11 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Language"
+        android:text="Author"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/langTextInputView"
         app:layout_constraintEnd_toStartOf="@+id/langTextInputView"
-        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintHorizontal_bias="0.662"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/langTextInputView"
         app:layout_constraintVertical_bias="0.484" />
@@ -66,39 +66,51 @@
 
     <Button
         android:id="@+id/confirmButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="174dp"
+        android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:text="Confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/yearTextInputView"
-        app:layout_constraintVertical_bias="0.015" />
+        app:layout_constraintVertical_bias="0.016" />
 
     <TextView
         android:id="@+id/resultQuantity"
-        android:layout_width="130dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="300dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="24dp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmButton" />
 
     <TextView
         android:id="@+id/resultItems"
-        android:layout_width="276dp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="164dp"
+        android:layout_width="300dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="8dp"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/roomData"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultQuantity"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.21" />
+
+    <Button
+        android:id="@+id/roomData"
+        android:layout_width="175dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="120dp"
+        android:text="Remove DB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

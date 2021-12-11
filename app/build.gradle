@@ -1,6 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+
+    //Room
+    id 'kotlin-kapt'
+
 }
 
 android {
@@ -32,13 +36,42 @@ android {
 }
 
 dependencies {
-
+    //val roomVersion = "2.3.0"
     implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
     implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+
+
+    //-----------------------------------------------------------
+
+
+    // optional - RxJava2 support for Room
+    implementation("androidx.room:room-rxjava2:2.3.0")
+
+    // optional - RxJava3 support for Room
+    implementation("androidx.room:room-rxjava3:2.3.0")
+
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    implementation("androidx.room:room-guava:2.3.0")
+
+    // optional - Test helpers
+    testImplementation("androidx.room:room-testing:2.3.0")
+
+    // optional - Paging 3 Integration
+    implementation("androidx.room:room-paging:2.4.0-rc01")
+
+    // Room
+    implementation "androidx.room:room-runtime:2.4.0-rc01"
+    annotationProcessor "androidx.room:room-compiler:2.4.0-rc01"
+    kapt "androidx.room:room-compiler:2.4.0-rc01"
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:2.4.0-rc01"
+
+    //-----------------------------------------------------------------
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
